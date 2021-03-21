@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First day of our Course</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <nav>
+        <ul>
+          <div class="navbar">
+            <li><a href="index.html">Home</a></li>
+          </div>
+          <div class="currentSite navbar">
+            <li><a href="dayone.html">Day One</a></li>
+          </div>
+          <div class="navbar">
+            <li><a href="daytwo.html">Day Two</a></li>
+          </div>
+          <div class="navbar">
+            <li><a href="daythree.html">Day Three</a></li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="bgcard">
+      <div class="textContainer">
+        <h2><i>What</i> is HTMl</h2>
+        <p>
+          HTML stands for Hypertext markup language, it is used for structuring
+          a website and getting the basics for it done such as textstyling and
+          implement text.
+        </p>
+        <p>
+          Using HTML only you will be easily able to make a website that I would
+          compare to a newspaper
+        </p>
+        <p>
+          HTML is using elements that are representated by "tags" here are the
+          most common and basic ones.
+        </p>
+      </div>
+      <div class="textContainer">
+        <h2>Tags</h2>
+        <p>before we start you need to understand how tags are built.</p>
+        <p>
+          Most tags have an opening and a closing tag
+          <b>but not every tag</b> has a closing tag, if you use programms like
+          visual studio code those will be implemented on their own, but if not
+          you will need to know which ones do have closing tags and which dont.
+        </p>
+        <p>
+          An example for a tag with a closing tag would be an
+          <a href="#anchors"><i>anchor</i></a> it looks like this.
+        </p>
+        <div class="hackerBox">
+          <p>&lt;a href="www.yourlink.de"&gt;Click here&lt;/a&gt;</p>
+        </div>
+        <p>
+          As you can see the closing tag is like an opening tag but start with /
+        </p>
+        <p>
+          Tags that don't need a closing tag will in this tutorial be marked
+          with *
+        </p>
+      </div>
+      <a href="https://developer.mozilla.org/de/docs/Web/API/HTMLHeadElement" target="_blank">
+        <div class="textContainer">
+          <h2>Head</h2>
+          <p>Lets start at the most confusing part. The Head</p>
+          <p>The HTML &lt;head&gt; element has nothing to do with HTML
+            headings (h1, h2,...)!
+            The &lt;head&gt; element is a container for Metadata (meta tags)
+            and other informations about the HTML document.
+            Metadata are not displayed in the browser window.</p>
+            <p>Inside the &lt;head&gt; ... &lt;/head&gt; you can for example place the
+              following elements:</p>
+              <ul>
+                <li>&lt;title&gt;
+                  Defines the page title (important for SEO)</li>
+                <li>&lt;style&gt; Style information for your webpage</li>
+                <li>&lt;link&gt;
+                  Used to link to external stylesheets (see CSS),
+                  favicon, Google fonts etc.</li>
+                <li>&lt;meta&gt; Defines meta data like character set, description,
+                  keywords, author and more</li>
+                <li>&lt;script&gt; Defines client side JavaScript for your page</li>
+              </ul>
+        </div>
+      </a>
+      <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/Heading_Elements"
+        target="_blank">
+        <div class="textContainer textContainerlink">
+          <h3>Headers</h3>
+          <p>
+            Headers work using the &lt;h(number from 1-6)&gt; tags with
+            increasing number the importancy of the header decreases, headers
+            need a closing tag
+          </p>
+          <p>You should always only have 1 h1</p>
+        </div>
+      </a>
+
+      <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/p" target="_blank">
+        <div class="textContainer textContainerlink">
+        <h3>Paragraphs</h3>
+        <p>
+          Paragraphs are called with the &lt;p&gt; tag and are used for basic
+          texts like this one
+        </p>
+      </div>
+      </a>
+      <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/br" target="_blank">
+        <div class="textContainer textContainerlink">
+        <h2>Break lines *</h2>
+        <p>
+          using &lt;br&gt; you cann add a break which means you can put text
+          inside the same element 1 row down
+        </p>
+      </div>
+      </a>
+      <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/a" target="_blank">
+        <div class="textContainer textContainerlink" id="anchors">
+        <h3>Anchors</h3>
+        <p>
+          Anchors are used to link to somewhere else like another website they
+          are built with &lt;a href="link.de"&gt;
+        </p>
+      </div>
+      </a>
+      <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/img" target="_blank">
+        <div class="textContainer textContainerlink">
+        <h3>Images</h3>
+        <p>
+          Images are inserted using &lt;img src="image.png" alt="Text for blind
+          people that can be read by a voice over programm"&gt;
+        </p>
+      </div>
+      </a>
+      <div class="textContainer">
+        <h3>Comments</h3>
+        <p>Comments are made with &lt;!-- YOUR COMMENT--&gt; they are used to put text into your code without the text interfering with it or being rendered on the page its just for the developer a sort of note</p>
+      </div>
+      <a href="./firstweek/daytwo.html">
+        <div class="textContainer">
+          <p>You can find the second day of our first week here</p>
+        </div>
+      </a>
+      <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/table" target="_blank">
+        <div class="textContainer">
+          <h3>Tables</h3>
+        <p>Tables are just like the name implies a way of displaying tables on your website</p>
+        <p>These are the Table elements</p>
+        <ul>
+          <li>&lt;table&gt; Defines a table</li>
+          <li>&lt;tr&gt; Defines a table row</li>
+          <li>&lt;td&gt; Data container. Can contain all sorts of HTML
+            elements</li>
+          <li>&lt;th&gt; Defines a table heading</li>
+          <li>&lt;caption&gt; Defines a table caption</li>
+          <li>&lt;colgroup&gt; Specifies a group of columns in a table for
+            formatting</li>
+          <li>&lt;col&gt;
+            Specifies column properties for each column
+            within a <colgroup> element</li>
+        </ul>
+        <p>A simple table could therefore look like this</p>
+        <div class="hackerBox">
+          <p>&lt;table&gt;</p>
+          <p>   &lt;tr&gt;</p>
+          <p>     &lt;th&gt;First Name&lt;/th&gt;</p>
+          <p>     &lt;th&gt;last Name&lt;/th&gt;</p>
+          <p>     &lt;th&gt;Age&lt;/th&gt;</p>
+          <p>   &lt;/tr&gt;</p>
+          <p> &lt;tr&gt;</p>
+          <p>   &lt;td&gt;Eve&lt;/td&gt;</p>
+          <p>   &lt;td&gt;Smith&lt;/td&gt;</p>
+          <p>   &lt;td&gt;46&lt;/td&gt;</p>
+          <p> &lt;/tr&gt;</p>
+          <p>&lt;/table&gt;</p>
+        </div>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>
