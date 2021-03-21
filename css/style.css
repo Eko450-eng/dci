@@ -130,7 +130,7 @@ ul {
   border: 2px solid green;
   height: auto;
 }
-.hackerBox > p {
+.hackerBox > p{
   text-align: left;
   color: lime;
   padding: 10px;
