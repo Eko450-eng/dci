@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 :root {
   --clrbg: rgb(48, 34, 34);
   --clrbg2: rgba(48, 34, 34, 0.356);
@@ -7,14 +8,13 @@
 html{
   width: 100vw;
   height: 100vh;
-
 }
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   text-align: center;
 
@@ -62,13 +62,30 @@ nav li {
   background:var(--clrTextBox);
   font-weight: bold;
 }
-
-
-
-
+/*Basic Stuff*/
 a {
   text-decoration: none;
   color: black;
+}
+.bgcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50em;
+  background: var(--clrbgCard);
+  padding: 5em;
+  border-radius: 50px;
+}
+.textBoxWhite {
+  margin-left: 2em;
+  margin-right: 2em;
+  background: #fff;
+  height: auto;
+  border-radius: 10px;
+}
+.textBoxWhite > p {
+  text-decoration: underline rgb(197, 0, 0);
 }
 .textContainer {
   padding: 1em;
@@ -115,12 +132,42 @@ a {
   flex-direction: column;
   text-align: center;
 }
+.formTextBox{
+  background:#19191993;
+  color: white;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-style: hidden;
+  border-radius: 10px;
+  text-align: center;
+}
+.formTextBox::placeholder{
+  color:white;
+}
+.message{
+  min-width: 275px;
+  max-width: 275px;
+  max-height: 300px;
+  min-height: 30px;
+}
 ol {
   text-align: initial;
 }
 ul {
   text-align: initial;
 }
+.sideBySide{
+  display: flex;
+}
+.sideBySideL {
+  width: 50%;
+  margin-left:auto;
+}
+.sideBySideR {
+  width: 50%;
+  margin-right:auto;
+}
+/*hackerbox*/
 .hackerBox {
   background: black;
   display: flex;
@@ -156,6 +203,7 @@ ul {
     font-size: 0;
   }
 }
+/*Glitch effekt*/
 .glitch {
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
     -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
@@ -200,16 +248,7 @@ ul {
       0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   }
 }
-.testbox {
-  margin-left: 2em;
-  margin-right: 2em;
-  background: #fff;
-  height: auto;
-  border-radius: 10px;
-}
-.testbox > p {
-  text-decoration: underline rgb(197, 0, 0);
-}
+/*Exercise on CSS*/
 #cssExerciseBG {
   display: flex;
   justify-content: center;
@@ -218,18 +257,41 @@ ul {
   height: 100vh;
   background-image: url(../images/wallpaper.jpeg);
 }
-.bgcard {
-  width: 50em;
-  background: var(--clrbgCard);
-  padding: 5em;
-  border-radius: 50px;
-}
+
 div p {
   font-family: arial;
   font-weight: bold;
 }
+
+/*Box Model Exercise*/
+.boxContainer{
+  border: 2px solid red;
+  
+}
+.boxContainerSecondClass{
+  border: 5px dotted green;
+  width: 30%;
+  margin-left: 33%;
+  padding:0.5em;
+}
+#boxContainerId{
+  border: 1px groove red;
+  width: 30%;
+  margin-left: 33%;
+  padding:0.5em;
+}
+#boxContainerSecondId{
+  border: 5px dashed green;
+  width: 30%;
+  margin-left: 33%;
+  padding:0.5em;
+}
+
 @media (max-width:900px){
    .bgcard{
        width: 100vw;
    } 
+   .navbar{
+     padding: 5px; 
+   }
 }
