@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #191919;
+}
+.textBox{
+    position: absolute;
+    width: 758px;
+    height: 283px;
+    left: 581px;
+    top: 244px;
+    
+    background: #C4C4C4;
+    border-radius: 100px 25px 25px 25px;
+}
