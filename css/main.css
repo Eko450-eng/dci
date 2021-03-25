@@ -56,7 +56,6 @@ body {
 /* header */
 .head {
   position: relative;
-  width: 100vw;
   height: 106px;
   left: 0px;
   top: 0px;
@@ -221,7 +220,7 @@ a {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 @keyframes importance2 {
@@ -229,12 +228,12 @@ a {
     transform: translatey(-100%);
   }
   100% {
-    transform: translatey(100%);
+    transform: translatey(0%);
   }
 }
 @keyframes importance3 {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
@@ -242,7 +241,7 @@ a {
 }
 @keyframes importance4 {
   0% {
-    transform: translateY(100%);
+    transform: translateY(0%);
   }
   100% {
     transform: translateY(-100%);
