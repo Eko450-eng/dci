@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css?v2.2.2">
+    <link rel="stylesheet" href="./css/main.css?v2.3.3">
     <title>Contact</title>
 </head>
 <body>
@@ -26,11 +26,13 @@
             <div class="nav currentSite"><a href="contact.php"><span></span><span></span><span></span><span></span>Contact</a></div>
           </div>
         </div>
-        <div class="wih">
-          <span></span><span></span><span></span><span></span>
-            <h2>Contact</h2>
+        <div class="banner">
+          <div class="wih">
+            <span></span><span></span><span></span><span></span>
+            <h2>Contact me</h2>
+            <p>You can send me a message using this form on here</p>
+          </div>
         </div>
-        <div class="body"><p>You can send me a message using this form on here</p></div>
          
         <div class="formBox">
             <?php
@@ -44,15 +46,15 @@
         <?php
     }
       ?>
-      <form action="contact.php" method="post">
-          <label>Name</label>
-          <input required type="text" class="formField" name="name" placeholder="Name">
-          <label>E-Mail</label>
-          <input required type="email" class="formField" name="email" placeholder="Your E-Mail">
-          <label>Message<label><br>
-              <textarea required class="formField" name="Message" placeholder="Your message" cols="10" rows="2" maxlength="300"></textarea><br>
-        <button class="button_1" type="submit" name="submit" value="Submit">Send</button>
-      </form>
+          <form action="contact.php" method="post">
+            <label>Name</label>
+            <input required type="text" class="formField" name="name" placeholder="Name">
+            <label>E-Mail</label>
+            <input required type="email" class="formField" name="email" placeholder="Your E-Mail">
+            <label>Message<label><br>
+            <textarea required class="formField" name="Message" placeholder="Your message" cols="10" rows="2" maxlength="300"></textarea><br>
+            <button class="button_1" type="submit" name="submit" value="Submit">Send</button>
+          </form>
         </div>
 </body>
 </html>
