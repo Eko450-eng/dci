@@ -71,8 +71,18 @@ body {
     top: 0;
     width: 10px;
     height: 44.11px;
-}
-.logo > h1 {
+  }
+  .hspan {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--animClr1), var(--animClr2));
+    animation: importance1 12s infinite;
+  }
+  
+  .logo > h1 {
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
@@ -81,6 +91,48 @@ body {
 }
 
 /* Navigation */
+.currentSite {
+  position: relative;
+  overflow: hidden;
+}
+.currentSite span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--animClr1), var(--animClr2));
+  animation: importance1 2s infinite;
+}
+.currentSite span:nth-child(2) {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to bottom, var(--animClr1), var(--animClr2));
+  animation: importance2 2s infinite;
+  animation-delay: 1s;
+}
+.currentSite span:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, var(--animClr1), var(--animClr2));
+  animation: importance3 2s infinite;
+}
+.currentSite span:nth-child(4) {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  bottom: ;
+  left: 0;
+  background: linear-gradient(to top, var(--animClr1), var(--animClr2));
+  animation: importance4 2s infinite;
+  animation-delay: 0.9s;
+}
 .navigation {
   display: flex;
   position: absolute;
@@ -90,11 +142,16 @@ body {
   font-weight: normal;
   font-size: 43px;
   line-height: 50px;
+  font-size: 20px;
+}
+.navigation a{
+    padding-right: 5px;
+    padding-left: 5px;
 }
 .nav {
   margin-left: 1em;
   background: rgb(160, 155, 155);
-  border-radius: 12px;
+  border-radius: 6px;
 }
 .nav:hover {
   box-shadow: -5px 5px 5px rgba(48, 34, 34, 0.356);
@@ -201,10 +258,11 @@ h4 {
   background: black;
   display: flex;
   flex-direction: column;
-  margin-right: 2em;
-  margin-left: 2em;
+  margin-right: 1em;
+  margin-left: 1em;
   border: 2px solid green;
   height: auto;
+  line-height: 5px;
 }
 .hackerBox > p {
   text-align: left;
@@ -265,13 +323,95 @@ h4 {
     transform: translateY(-100%);
   }
 }
+
+/*Image*/
+.image{
+  z-index: 4;
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  top: 5em;
+  right: 1em;
+  width: 20vw;
+  height: auto;
+  background-size: contain;
+  animation: opac 5s 1;
+  animation-fill-mode: forwards;
+} 
+.image>img{
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes opac{
+  0%{opacity: 0;}
+  5%{opacity: 1;}
+  100%{opacity: 0;}
+}
+/*Contact Form*/
+
+.formBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+.formBox label{
+    text-align: center;
+    padding-top: 1.5em;;
+}
+form{
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+  background: grey;
+  width: 40%;
+  align-self: center;
+  border-radius: 15px;
+  box-shadow: -5px 5px 5px rgba(48, 34, 34, 0.356);
+}
+textarea{
+    margin-bottom: 1em;
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 20px;
+}
+button{
+    background: white;
+    border-radius: 25px;
+    color: slategrey;
+    border:0;
+    box-shadow: -2px 2px 5px rgba(48, 34, 34, 0.656);
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+}
+button:hover{
+    transform: translate(2px,-2px);
+    box-shadow: -4px 4px 3px rgba(48, 34, 34, 0.656);
+}
+.formField{
+    border-radius: 25px;
+    background: slategray;
+    text-align: center;
+    border: 0;
+    box-shadow: -2px 2px 5px rgba(255, 255, 255, 0.656);
+}
+.formField::placeholder{
+    color: #fff;
+}
 /*Hamburger*/
 .hamburger {
   position: absolute;
   right: 4.5%;
   top: 35%;
-  width: 30px;
-  height: 30px;
+  width: 65px;
+  height: 45px;
   z-index: 3;
   visibility: hidden;
 }
@@ -281,7 +421,7 @@ input[type=checkbox]{
 .line { 
     position: absolute; 
     right:10px;
-    top: 22px;
+    top: 12px;
     height: 4px; width: 55px; 
     background: #fff; border-radius: 2px;
     display: block; 
@@ -307,7 +447,9 @@ input[type=checkbox]{
 
 #hamburger:checked + .hamburger + div.navigation {
   display: flex;
+  position: fixed;
 }
+
 @media (min-width: 923px) {
   .hamburger {
     display: flex;
@@ -330,6 +472,8 @@ input[type=checkbox]{
   }
   .wih {
     width: 85%;
+    height: auto;
+    font-size: 20px;
   }
   .wih:hover span:nth-child(1) {
     visibility: hidden;
@@ -343,8 +487,12 @@ input[type=checkbox]{
   .wih:hover span:nth-child(4) {
     visibility: hidden;
   }
+
   .hamburger{
       visibility: visible;
+  }
+  .logo h1{
+      font-size: 35px;
   }
   .navigation {
     position: absolute;
@@ -361,5 +509,32 @@ input[type=checkbox]{
   }
   .nav{
       margin: 0.7em;
+  }
+  .formBox{
+      width: 100%;
+  }
+  .sideBySide{
+    flex-direction: column;
+  }
+  .R{
+    width: 100%;
+  }
+  .L{
+    width: 100%;
+  }
+  .image{
+    visibility: hidden;
+  }
+  .currentSite span:nth-child(1) {
+    visibility: hidden;
+  }
+  .currentSite span:nth-child(2) {
+    visibility: hidden;
+  }
+  .currentSite span:nth-child(3) {
+    visibility: hidden;
+  }
+  .currentSite span:nth-child(4) {
+    visibility: hidden;
   }
 }
