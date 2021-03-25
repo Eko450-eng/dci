@@ -127,7 +127,6 @@ body {
   position: absolute;
   width: 2px;
   height: 100%;
-  bottom: ;
   left: 0;
   background: linear-gradient(to top, var(--animClr1), var(--animClr2));
   animation: importance4 2s infinite;
@@ -212,7 +211,6 @@ a {
   position: absolute;
   width: 2px;
   height: 100%;
-  bottom: ;
   left: 0;
   background: linear-gradient(to top, var(--animClr1), var(--animClr2));
   animation: importance4 2s infinite;
