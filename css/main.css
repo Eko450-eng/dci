@@ -167,7 +167,6 @@ a {
   flex-direction: column;
   margin-right: 1em;
   margin-left: 1em;
-  width: 35%;
   height: 10%;
 
   text-align: center;
@@ -491,7 +490,7 @@ input[type="checkbox"] {
   position: fixed;
 }
 /*disable hamburger on pc*/
-@media (min-width: 923px) {
+@media (min-width: 1189px) {
   .hamburger {
     display: flex;
   }
@@ -502,7 +501,7 @@ input[type="checkbox"] {
   }
 }
 /* Mobile media querry */
-@media (max-width: 923px) {
+@media (max-width: 1189px) {
   body,
   html {
     overflow-x: hidden;
@@ -535,7 +534,6 @@ input[type="checkbox"] {
     font-size: 16px;
   }
   .wih {
-    width: 85%;
     height: auto;
     font-size: 20px;
   }
@@ -610,5 +608,3 @@ input[type="checkbox"] {
     visibility: hidden;
   }
 }
-
-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
