@@ -7,7 +7,7 @@
   --clrBox: #3d5af1;
   --clrHeader: #0e153a;
   --clrCyan: #22d1ee;
-  --clrTextBox: rgba(223, 114, 52, 0.705);
+  --clrTextBox: #be6a15;
   --clrShadow: rgba(0, 0, 0, 0.356);
   --clrShadowWhite: rgba(243, 240, 240, 0.356);
   --animClr1: orange;
@@ -23,9 +23,65 @@ body {
   display: flex;
   flex-direction: column;
   background: #c4c4c4;
+  overflow: hidden;
 }
 /* background animation */
+.svg{
+  position: absolute;
+} 
+.btn{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  width: 20em;
+  height: 4em;
+  margin-bottom:1em;
+}
+.btn p{
+  padding-top:10px;
+  margin:0;
+}
 
+.street{
+  overflow: hidden;
+  width: 100%;
+}
+.bus{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  animation: drive 20s ease;
+}
+#Bus{
+  animation: bobbing 10s ease-in-out;
+  animation-delay: 2s;
+}
+#rightwheel{
+  animation:bobbing 10s ease-in-out;
+}
+#leftwheel{
+  animation:bobbing 10s ease-in-out;
+}
+@keyframes drive{
+  0%{left:-100%}
+  100%{left:200%;}
+}
+@keyframes bobbing{
+  0%{transform: translate(0,0%);}
+  10%{transform: translate(0,-1%);}
+  20%{transform: translate(0,0%);}
+  30%{transform: translate(0,-1%);}
+  40%{transform: translate(0,0%);}
+  50%{transform: translate(0,-1%);}
+  60%{transform: translate(0,0%);}
+  70%{transform: translate(0,-1%);}
+  80%{transform: translate(0,0%);}
+  90%{transform: translate(0,-1%);}
+  100%{transform: translate(0,0%);}
+}
 .circle1 {
   background-color: var(--animClr2);
   position: absolute;
@@ -35,6 +91,7 @@ body {
   bottom: 20em;
   right: 12em;
   animation: ball1 150s ease-out infinite;
+  z-index: -1;
 }
 .circle2 {
   background-color: var(--animClr1);
@@ -45,6 +102,7 @@ body {
   bottom: 3em;
   right: 16em;
   animation: ball2 200s ease-out infinite;
+  z-index: -1;
 }
 .circle3 {
   background-color: #3d5af1;
@@ -55,6 +113,7 @@ body {
   bottom: 15em;
   right: 1em;
   animation: ball3 360s ease-out infinite;
+  z-index: -1;
 }
 .circle4 {
   background-color: #22d1ee;
@@ -65,6 +124,7 @@ body {
   bottom: 35em;
   right: 12em;
   animation: ball4 70s ease-out infinite;
+  z-index: -1;
 }
 @keyframes ball1 {
   0% {
@@ -226,11 +286,14 @@ body {
   height: auto;
   left: 12em;
   font-size: 12px;
+  color: slategray;
 }
 .whomep {
-  font-size: 12px;
+  font-size: 18px;
   padding-left: 20em;
   padding-top: 6em;
+  margin-left: 14em;
+  color: slategray;
 }
 /* panda */
 .panda {
@@ -250,7 +313,6 @@ a {
 .fadeout{
   animation: fadein 5s ;
 }
-
 .wih {
   position: relative;
   display: flex;
@@ -266,6 +328,7 @@ a {
   font-size: 34px;
   line-height: 19px;
   overflow: hidden;
+
 }
 .wih:hover span:nth-child(1) {
   position: absolute;
@@ -701,5 +764,61 @@ input[type="checkbox"] {
   }
   .panda {
     visibility: hidden;
+  }
+  .circle1{
+    opacity: 0.1;
+  }
+  .circle2{
+    opacity: 0.1;
+  }
+  .circle3{
+    opacity: 0.1;
+  }
+  .circle4{
+    opacity: 0.1;
+  }
+  @keyframes ball1 {
+    0% {
+      transform: translate(0%, 0%);
+      bottom: 0;
+      opacity: 0.1;
+    }
+    100% {
+      transform: translate(20%, -4000%);
+      opacity: 0.3;
+    }
+  }
+  @keyframes ball2 {
+    0% {
+      transform: translate(0%, 0%);
+      bottom: 0;
+      opacity: 0.1;
+    }
+    100% {
+      transform: translate(20%, -4000%);
+      opacity: 0.3;
+    }
+  }
+  @keyframes ball3 {
+    0% {
+      transform: translate(0%, 0%);
+      bottom: 0;
+      opacity: 0.1;
+    }
+    100% {
+      transform: translate(-40%, -4000%);
+      opacity: 0.3;
+    }
+  }
+  @keyframes ball4 {
+    0% {
+      transform: translate(0%, 0%);
+      bottom: 0;
+      opacity: 0.1;
+    }
+    100% {
+      transform: translate(20%, -4000%);
+      opacity: 0.3;
+    }
   }
 }
